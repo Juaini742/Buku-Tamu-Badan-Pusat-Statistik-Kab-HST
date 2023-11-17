@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import SideBar2 from "../../Organisms/user/SideBar2";
-import Header from "../../Organisms/user/Header";
-import Footer from "../../Organisms/user/Footer";
+import SideBar2 from "./SideBar2";
+import Header from "./Header";
+import Footer from "./Footer";
 import { useState } from "react";
 
 function UserTemplate(props) {

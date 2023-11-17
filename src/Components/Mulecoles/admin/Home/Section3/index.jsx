@@ -49,9 +49,11 @@ const columns = [
 
 function HomeSection3Admin() {
   return (
-    <Container className="my-10">
+    <Container className="my-10 snap-x">
       <Hed1 variant="title-primary">Tabel Data</Hed1>
-      <Table dataSource={dataSource} columns={columns} />
+      <div className="snap-center">
+        <Table dataSource={dataSource} columns={columns} />
+      </div>
     </Container>
   );
 }

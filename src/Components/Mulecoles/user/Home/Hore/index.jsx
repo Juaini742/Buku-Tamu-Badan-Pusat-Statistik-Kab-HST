@@ -13,8 +13,13 @@ function HeroUser() {
         Sebelum anda dapat menambahkan isian baru, anda harus melakukan scan QR
         terlebih dahulu
       </Parag>
+      <Link to="/critics">
+        <Button variant="outline" className="mt-5 mr-3 py-2 px-9 ">
+          Berikan Saran
+        </Button>
+      </Link>
       <Link to="/formAdd1">
-        <Button variant="primary" className="mt-5 py-3 px-9 ">
+        <Button variant="primary" className="py-3 px-9 ">
           Sceen Disini
         </Button>
       </Link>

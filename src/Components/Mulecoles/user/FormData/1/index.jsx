@@ -9,7 +9,7 @@ function FormAddData1() {
       <Parag variant="subTitile">
         Selamat datang di halaman pengisian data tamu
       </Parag>
-      <Link to="/formAdd1/formAdd2">
+      <Link to="/formAdd1/FromAdd12">
         <Button variant="primary" className="py-3 px-10 mt-5">
           Sceen Disini
         </Button>

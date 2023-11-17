@@ -23,6 +23,19 @@ function MainHomeUser() {
           </Button>
         </div>
       </Card>
+      <Hed1 variant="title" className="mt-5">
+        Riwayat Kritik/Saran
+      </Hed1>
+      <Card>
+        <h4>
+          <u>Muhammad Anshar</u>
+        </h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          eius ex ipsa blanditiis odio commodi fuga facere esse tempore
+          adipisci.
+        </p>
+      </Card>
     </Container>
   );
 }

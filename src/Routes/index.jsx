@@ -15,6 +15,8 @@ import SettingPageAdmin from "../Components/Pages/admin/SettingPageAdmin";
 import ProfilePageAdmin from "../Components/Pages/admin/ProfilePageAdmin";
 import DetailsFormAdmin from "../Components/Pages/admin/DetailsFormAdmin";
 import UpdateFormAdmin from "../Components/Pages/admin/UpdateFormAdmin";
+import Critics from "../Components/Pages/user/Critics";
+import FromAdd12 from "../Components/Pages/user/FromAdd12";
 
 function RootRoutes() {
   return (
@@ -26,9 +28,12 @@ function RootRoutes() {
           <Route path="/profile" element={<Profile />} />
 
           <Route path="/formAdd1" element={<FormAdd1 />} />
+          <Route path="/formAdd1/FromAdd12" element={<FromAdd12 />} />
           <Route path="/formAdd1/formAdd2" element={<FormAdd2 />} />
 
           <Route path="/details" element={<DetailsPage />} />
+          <Route path="/critics" element={<Critics />} />
+
           <Route path="/admin" element={<HomePageAdmin />} />
           <Route path="/aboutAdmin" element={<AboutPageAdmin />} />
 

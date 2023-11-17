@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import SideBar from "../../Organisms/admin/SideBar";
-import Header from "../../Organisms/admin/Header";
-import Footer from "../../Organisms/admin/Footer";
+import SideBar from "./SideBar";
+import Header from "./Header";
+import Footer from "./Footer";
 import { useState } from "react";
 
 function AdminTemplate(props) {
