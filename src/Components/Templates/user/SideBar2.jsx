@@ -11,6 +11,11 @@ function SideBar2(props) {
     setItems(navitems);
   }, []);
 
+  const handleLogOut = () => {
+    localStorage.clear();
+    window.location.href = "/login";
+  };
+
   const currentPath = window.location.pathname;
   return (
     <nav
@@ -40,7 +45,10 @@ function SideBar2(props) {
           </ul>
         </div>
         <div className="mt-10">
-          <button className="bg-sky-600 text-white py-2 px-10 rounded-lg">
+          <button
+            onClick={handleLogOut}
+            className="bg-sky-600 text-white py-2 px-10 rounded-lg"
+          >
             Logout
           </button>
         </div>

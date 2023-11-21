@@ -13,6 +13,9 @@ function Hed1(props) {
     case "title-primary":
       hedStyle += "text-xl text-primary font-bold";
       break;
+    case "title-card":
+      hedStyle += "text-lg text-primary font-semibold";
+      break;
     default:
       hedStyle += "";
       break;

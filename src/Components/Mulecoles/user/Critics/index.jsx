@@ -1,49 +1,83 @@
+/* eslint-disable react/prop-types */
 import { Input } from "antd";
-import { Link } from "react-router-dom";
-import { Container, Hed1, Parag, Card, Button } from "../../../Atoms";
+import { Card, Button } from "../../../Atoms";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { criticsPostAction } from "../../../../store/Actions/criticsPostAction";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
-function CriticsForm() {
-  const [value, setValue] = useState("");
+function CriticsForm(props) {
+  const { isVisible } = props;
+  const dispatch = useDispatch();
+  const currentUser = useSelector((state) => state.critics.currentUser);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    suggestion: "",
+  });
+
+  const handleChange = (e) => {
+    if (e.target) {
+      setFormData((prevData) => ({
+        ...prevData,
+        [e.target.name]: e.target.value,
+      }));
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        suggestion: e,
+      }));
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(criticsPostAction({ formData, currentUser }));
+    setFormData({
+      name: "",
+      suggestion: "",
+    });
+  };
 
   return (
-    <Container>
-      <Hed1 variant="title">Kantor Badan Pusat Statistik Kab. HST</Hed1>
-      <Parag variant="subTitile">
-        Selamat datang di halaman Form Saran/Kritik
-      </Parag>
-      <Card className="my-10">
+    <Card
+      className={`my-10 trans-300 overflow-scroll absolute w-3/4 ${
+        isVisible ? "scale-100" : "scale-0"
+      }`}
+    >
+      <form onSubmit={handleSubmit}>
         <div>
-          <label>Nama</label>
+          <label htmlFor="name">Nama</label>
           <Input
             type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
             placeholder="Masukkan Nama Anda"
             className="my-2"
+            required
           />
         </div>
         <div>
           <label>Pesan</label>
           <ReactQuill
             theme="snow"
-            value={value}
-            onChange={setValue}
-            className="bg-white mb-10"
+            value={formData.suggestion}
+            onChange={handleChange}
+            className="bg-white mb-2"
+            required
           />
         </div>
         <div>
-          <Button variant="primary" className="my-5 mr-3 py-2 px-5">
+          <Button variant="primary" className="py-2 px-5">
             Kirim
           </Button>
-          <Link to="/">
-            <Button variant="warning" className="py-2 px-5">
-              Batal
-            </Button>
-          </Link>
         </div>
-      </Card>
-    </Container>
+      </form>
+    </Card>
   );
 }
 

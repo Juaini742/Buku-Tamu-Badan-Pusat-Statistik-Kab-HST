@@ -14,12 +14,12 @@ function UserTemplate(props) {
 
   return (
     <>
-      <div className="flex flex-col overflow-hidden">
+      <div className="flex flex-col relative overflow-hidden">
         <Header onToggleSidebar={toggleSidebar} />
         <div className="flex">
           <SideBar2 isVisible={isSidebarVisible} />
           <div
-            className={`trans-500 mt-[70px] flex-1 ${
+            className={`trans-500 mb-28 mt-[70px] flex-1 ${
               isSidebarVisible ? "ml-[250px]" : "ml-0"
             }`}
           >

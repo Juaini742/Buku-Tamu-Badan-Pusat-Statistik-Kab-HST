@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Container, Hed1, Parag, Button } from "../../../Atoms";
 function AboutUser() {
   return (
@@ -18,9 +19,11 @@ function AboutUser() {
         ditindaklanjuti dengan peraturan perundangan dibawahnya, secara formal
         nama Biro Pusat Statistik diganti menjadi Badan Pusat Statistik.
       </Parag>
-      <Button variant="primary" className="py-2 w-full">
-        Lihat Lebih Detail
-      </Button>
+      <Link to="https://ppid.bps.go.id/app/konten/6307/Profil-BPS.html">
+        <Button variant="primary" className="py-2 w-full">
+          Lihat Lebih Detail
+        </Button>
+      </Link>
     </Container>
   );
 }
