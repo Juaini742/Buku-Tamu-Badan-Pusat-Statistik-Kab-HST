@@ -37,7 +37,7 @@ function RootRoutes() {
               <Route path="/formAdd1/FromAdd12" element={<FromAdd12 />} />
               <Route path="/formAdd1/formAdd2" element={<FormAdd2 />} />
 
-              <Route path="/details" element={<DetailsPage />} />
+              <Route path="/details/:id" element={<DetailsPage />} />
 
               <Route path="/admin" element={<HomePageAdmin />} />
               <Route path="/aboutAdmin" element={<AboutPageAdmin />} />
@@ -49,7 +49,7 @@ function RootRoutes() {
               <Route path="/report" element={<ReportPageAdmin />} />
               <Route path="/profileAdmin" element={<ProfilePageAdmin />} />
               <Route path="/setting" element={<SettingPageAdmin />} />
-              <Route path="/detailsAdmin" element={<DetailsFormAdmin />} />
+              <Route path="/detailsAdmin/:id" element={<DetailsFormAdmin />} />
               <Route path="/updateAdmin" element={<UpdateFormAdmin />} />
             </>
           ) : (

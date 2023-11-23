@@ -5,7 +5,7 @@ function AboutUser() {
     <Container className="my-5">
       <Hed1 variant="title">Kantor Badan Pusat Statistik Kab. HST</Hed1>
       <Parag variant="subTitile">Selamat datang di halaman Tenang Kami</Parag>
-      <div className="my-5 overflow-hidden rounded-md">
+      <div className="my-5 overflow-hidden rounded-xl">
         <img src="./image/hero 1.jpg" alt="office" />
       </div>
       <Parag className="font-semibold text-base leading-10 text-justify">

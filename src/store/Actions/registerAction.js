@@ -20,6 +20,14 @@ export const registerAction = createAsyncThunk(
         email: user.email,
       };
 
+      swal({
+        title: "Kerja Bagus",
+        text: "Anda sudah terdaftar, silahkan melakukan login",
+        icon: "success",
+      }).then(() => {
+        window.location.href = "/login";
+      });
+
       dispatch(
         setAuthData({
           user: fiedUser,
@@ -27,13 +35,7 @@ export const registerAction = createAsyncThunk(
           loginError: null,
         })
       );
-      swal({
-        title: "Kerja Bagus",
-        text: "Anda sudah terdaftar, silahkan melakukan login",
-        icon: "success",
-      }).then(() => {
-        window.location.href = "/loginUser";
-      });
+     
     } catch (err) {
       console.error("telah terjadi kesalahan", err.message);
       swal({

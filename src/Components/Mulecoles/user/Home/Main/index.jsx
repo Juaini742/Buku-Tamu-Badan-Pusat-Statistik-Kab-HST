@@ -35,7 +35,7 @@ function MainHomeUser() {
               <Parag variant="subTitile">No.Hp: {item.phone}</Parag>
             </figure>
             <div className="flex gap-2">
-              <Link to="/details">
+              <Link to={`/details/${item.id}`}>
                 <Button variant="primary" className="h-20 px-4">
                   Lihat Lengkap
                 </Button>
@@ -54,11 +54,10 @@ function MainHomeUser() {
         <Skeleton active paragraph={{ rows: 4 }} />
       ) : (
         critics.map((item) => (
-          <Card key={item.id}>
+          <Card key={item.id} className="mb-3">
             <h4>
               <u>{item.name}</u>
             </h4>
-            {/* Cetak bagian suggestion dari data yang dihasilkan oleh React Quill */}
             <p dangerouslySetInnerHTML={{ __html: item.suggestion }} />
           </Card>
         ))

@@ -1,7 +1,6 @@
 import { Input } from "antd";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { Container, Hed1, Button } from "../../../Atoms";
-import Footer from "../../../Templates/user/Footer";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import RegisterFormUser from "../Register";
@@ -25,14 +24,14 @@ function LoginFormUser() {
 
   return (
     <>
-      <Container className="h-full mb-40">
+      <Container className="mt-[10%]">
         <RegisterFormUser
           hanldeRegisVisible={hanldeRegisVisible}
           isRegisVisible={isRegisVisible}
         />
 
         <div
-          className={`content-center items-center gap-3  my-10 ${
+          className={`items-center  gap-3  my-10 ${
             isRegisVisible ? "hidden" : "grid-1-2"
           }`}
         >
@@ -91,7 +90,7 @@ function LoginFormUser() {
           </form>
         </div>
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -4,18 +4,16 @@ function Button(props) {
   let btnStye = "";
   switch (variant) {
     case "primary":
-      btnStye +=
-        "trans-300 bg-primary rounded-md text-white hover:bg-secondary";
+      btnStye += "btn-primary";
       break;
     case "outline":
-      btnStye +=
-        "trans-300 ring-offset-2 ring-2 ring-primary bg-primary/30 rounded-md hover:bg-secondary hover:text-white";
+      btnStye += "btn-outline-primary";
       break;
     case "warning":
-      btnStye += "trans-300 bg-warning rounded-md text-white hover:bg-warningH";
+      btnStye += "btn-warning";
       break;
     case "danger":
-      btnStye += "trans-300 bg-danger rounded-md text-white hover:bg-dangerH";
+      btnStye += "btn-danger";
       break;
     default:
       btnStye += "";

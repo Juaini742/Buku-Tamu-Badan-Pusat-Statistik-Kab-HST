@@ -17,6 +17,7 @@ function Step1(props) {
           onChange={handleChange}
           value={formData.date}
           className="my-2"
+          required
         />
       </div>
       <div>
@@ -29,6 +30,7 @@ function Step1(props) {
           value={formData.data}
           placeholder="Masukkan Data yang Anda Perlukan"
           className="my-2"
+          required
         />
       </div>
     </Card>

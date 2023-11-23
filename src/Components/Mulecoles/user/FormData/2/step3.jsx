@@ -9,7 +9,7 @@ import { getDistAction } from "../../../../../store/Actions/distActions";
 import { useEffect } from "react";
 
 function Step3(props) {
-  const { formData, setFormData, handleChange, dispatch } = props;
+  const { formData, setFormData, dispatch, handleChange } = props;
 
   const prov = useSelector((state) => state.prov.prov);
   const regency = useSelector((state) => state.regency.regency);
@@ -105,7 +105,6 @@ function Step3(props) {
           className="w-full my-2"
         />
       </div>
-
       <div>
         <label htmlFor="address" className="block">
           Data Tambahan Alamat
@@ -116,7 +115,7 @@ function Step3(props) {
           value={formData.address}
           onChange={handleChange}
           rows="10"
-          className="w-full rounded-sm"
+          className="w-full rounded-sm border"
         ></textarea>
       </div>
     </Card>

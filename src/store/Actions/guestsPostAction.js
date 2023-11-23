@@ -10,6 +10,18 @@ export const guestsPostAction = createAsyncThunk(
     try {
       const user = auth.currentUser;
 
+    if (!/^\d{16}$/.test(formData.ktp)) {
+      throw new Error("KTP harus berisi 16 digit angka");
+    }
+
+    if (!/^\d{1,2}$/.test(formData.age)) {
+      throw new Error("Usia maksimal 2 digit angka");
+    }
+
+    if (!/^\d{1,13}$/.test(formData.phone)) {
+      throw new Error("Nomor telepon maksimal 13 digit angka");
+    }
+
       const updateFormData = {
         date: formData.date,
         name: formData.name,
@@ -33,17 +45,33 @@ export const guestsPostAction = createAsyncThunk(
         title: "Terima kasih",
         text: "Anda berhasil memasukkan data baru. Terima kasih atas waktunya",
         icon: "success",
-      });
+      }).then(() => {
+        window.location.reload()
+      })
 
       dispatch(setCurrentUser(user.uid));
       dispatch(addGuests(updateFormData));
 
       return updateFormData;
     } catch (error) {
-      console.error(error.message);
+      let errorMessage = "Terjadi kesalahan, silahkan ulangi";
+      switch (true) {
+        case error.message.includes("KTP"):
+          errorMessage = "Kesalahan pada KTP: " + error.message;
+          break;
+        case error.message.includes("Usia"):
+          errorMessage = "Kesalahan pada Usia: " + error.message;
+          break;
+        case error.message.includes("Nomor telepon"):
+          errorMessage = "Kesalahan pada Nomor telepon: " + error.message;
+          break;
+        default:
+          break;
+      }
+
       swal({
         title: "Gagal",
-        text: "Terjadi kesalahan, silahkan ulangi",
+        text: errorMessage,
         icon: "error",
       });
     }

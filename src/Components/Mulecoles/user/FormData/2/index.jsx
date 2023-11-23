@@ -40,21 +40,21 @@ function FormAddData2() {
     e.preventDefault();
     dispatch(guestsPostAction({ formData, currentUser }));
 
-    setFormData({
-      date: "",
-      name: "",
-      ktp: "",
-      educate: "",
-      age: "",
-      work: "",
-      phone: "",
-      selectedProvinsi: "",
-      selectedKab: "",
-      selectedKec: "",
-      selectedKel: "",
-      address: "",
-      data: "",
-    });
+    // setFormData({
+    //   date: "",
+    //   name: "",
+    //   ktp: "",
+    //   educate: "",
+    //   age: "",
+    //   work: "",
+    //   phone: "",
+    //   selectedProvinsi: "",
+    //   selectedKab: "",
+    //   selectedKec: "",
+    //   selectedKel: "",
+    //   address: "",
+    //   data: "",
+    // });
   };
 
   return (

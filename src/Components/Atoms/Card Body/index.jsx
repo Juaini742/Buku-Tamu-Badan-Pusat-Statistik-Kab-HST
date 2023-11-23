@@ -5,7 +5,7 @@ function CardBody(props) {
 
   switch (variant) {
     case "sm":
-      cardStyle += "max-w-sm shadow-lg rounded-md overflow-hidden";
+      cardStyle += "max-w-sm shadow-lg rounded-lg overflow-hidden";
       break;
     default:
       cardStyle += "";

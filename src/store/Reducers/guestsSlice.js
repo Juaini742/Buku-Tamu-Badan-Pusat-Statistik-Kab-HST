@@ -20,7 +20,7 @@ const guestSlice = createSlice({
   extraReducers: (build) => {
     build
       .addCase(loadGuestAction.pending, (state) => {
-        state.status = "Loading";
+        state.status = "loading";
       })
       .addCase(loadGuestAction.fulfilled, (state, action) => {
         state.status = "success";

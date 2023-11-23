@@ -7,5 +7,5 @@ export const distService = async (id) => {
       import.meta.env.VITE_APP_API_KEY_URL
     }`
   );
-  return response.data; // Return response.data instead of the entire response
+  return response.data; 
 };

@@ -29,7 +29,7 @@ function Header(props) {
             <h2 className="text-xl text-white font-bold">BPS</h2>
           </div>
           <div className="w-14">
-            <img src="image/logoStatistik.png" alt="" />
+            <img src="../image/logoStatistik.png" alt="" />
           </div>
         </div>
       </Container>

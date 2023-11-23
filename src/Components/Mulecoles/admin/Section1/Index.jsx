@@ -1,4 +1,4 @@
-import { Container, Hed1 } from "../../../Atoms";
+import { Hed1 } from "../../../Atoms";
 
 function HomeSection1Admin(props) {
   const { bigTitle } = props;
@@ -14,7 +14,7 @@ function HomeSection1Admin(props) {
           <img src="./image/profile2.jpg" alt="profile" className="w-full" />
         </div>
         <div className="">
-          <h1>James Andrean</h1>
+          <h1 className="font-bold">James Andrean</h1>
           <p>Admin BPS Kab. HST</p>
         </div>
       </div>

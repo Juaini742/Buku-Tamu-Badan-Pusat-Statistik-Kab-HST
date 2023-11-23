@@ -8,7 +8,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
 function CriticsForm(props) {
-  const { isVisible } = props;
+  const { isVisible, hanldeVisible } = props;
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => state.critics.currentUser);
 
@@ -43,7 +43,7 @@ function CriticsForm(props) {
 
   return (
     <Card
-      className={`my-10 trans-300 overflow-scroll absolute w-3/4 ${
+      className={`h-72 trans-300 overflow-scroll absolute top-80 w-full ${
         isVisible ? "scale-100" : "scale-0"
       }`}
     >
@@ -74,6 +74,13 @@ function CriticsForm(props) {
         <div>
           <Button variant="primary" className="py-2 px-5">
             Kirim
+          </Button>
+          <Button
+            onClick={hanldeVisible}
+            variant="danger"
+            className="py-2 px-5 ml-3"
+          >
+            Batal
           </Button>
         </div>
       </form>

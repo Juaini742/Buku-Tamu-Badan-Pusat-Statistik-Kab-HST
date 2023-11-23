@@ -17,6 +17,7 @@ function Step2(props) {
           value={formData.name}
           placeholder="Masukkan Nama Anda"
           className="my-2"
+          required
         />
       </div>
       <div>
@@ -30,7 +31,8 @@ function Step2(props) {
           placeholder="Masukkan no KTP/SIM Anda"
           className="my-2"
           showCount
-          maxLength={16}
+          maxLength="16"
+          required
         />
       </div>
       <div>
@@ -43,6 +45,7 @@ function Step2(props) {
           value={formData.educate}
           placeholder="Masukkan Title Pendidikan Anda atau Pendidikan Terakhir"
           className="my-2"
+          required
         />
       </div>
       <div>
@@ -56,7 +59,8 @@ function Step2(props) {
           placeholder="Masukkan Umur Anda"
           className="my-2"
           showCount
-          maxLength={2}
+          maxLength="2"
+          required
         />
       </div>
       <div>
@@ -69,12 +73,13 @@ function Step2(props) {
           value={formData.work}
           placeholder="Masukkan Pekerjaan Anda Sekarang"
           className="my-2"
+          required
         />
       </div>
       <div>
         <label htmlFor="phone">No. Hp</label>
         <Input
-          type="text"
+          type="number"
           id="phone"
           name="phone"
           onChange={handleChange}
@@ -82,7 +87,8 @@ function Step2(props) {
           placeholder="Masukkan No.Hp Anda"
           className="my-2"
           showCount
-          maxLength={13}
+          maxLength="13"
+          required
         />
       </div>
     </Card>

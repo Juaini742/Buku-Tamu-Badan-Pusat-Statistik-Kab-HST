@@ -9,6 +9,7 @@ export default {
         danger: "#7D120B",
         dangerH: "#AE0F22",
         purple: "#360A58",
+        grey: "#f3f4f6",
         warning: "#9A6600",
         warningH: "#BB8212",
       },

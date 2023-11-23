@@ -4,6 +4,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  @apply bg-grey;
 }
 img {
   @apply w-full;
@@ -46,4 +47,17 @@ img {
 }
 .grid-2-4 {
   @apply grid grid-cols-2 md:grid-cols-4;
+}
+
+.btn-primary {
+  @apply trans-300 bg-primary shadow-md shadow-primary rounded-xl text-white hover:bg-secondary;
+}
+.btn-outline-primary {
+  @apply trans-300 ring-offset-2 ring-2 ring-primary shadow-lg shadow-primary bg-primary/30 rounded-xl hover:bg-secondary hover:text-white;
+}
+.btn-danger {
+  @apply trans-300 bg-danger shadow-md shadow-danger rounded-xl text-white hover:bg-dangerH;
+}
+.btn-warning {
+  @apply trans-300 bg-warning shadow-md shadow-warning rounded-xl text-white hover:bg-warningH;
 }
